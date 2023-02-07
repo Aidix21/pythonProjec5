@@ -70,11 +70,12 @@ class MainWindow(QMainWindow):
         print(toponym_to_find)
 
         # Получаем координаты центра карты
-        my_map.lat, my_map.lon = get_coords(toponym_to_find)
+        my_map.lon, my_map.lat = get_coords(toponym_to_find)
         params = {
-            "ll": ",".join([str(my_map.lat), str(my_map.lon)]),
+            "ll": ",".join([str(my_map.lon), str(my_map.lat)]),
             "z": str(my_map.z),
-            "l": "map"
+            "l": "map",
+            'pt': f"{my_map.lon},{my_map.lat}"
         }
 
         # обновить изображение
@@ -94,9 +95,10 @@ class MainWindow(QMainWindow):
 
     def change_z(self):
         params = {
-            "ll": ",".join([str(my_map.lat), str(my_map.lon)]),
+            "ll": ",".join([str(my_map.lon), str(my_map.lat)]),
             "z": str(my_map.z),
-            "l": "map"
+            "l": "map",
+            'pt': f"{my_map.lon},{my_map.lat}"
         }
 
         # обновить изображение
