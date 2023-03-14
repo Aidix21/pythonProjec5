@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 
 @app.route('/list_prof/<list>')
-def image_mars(list):
+def list_prof(list):
     return render_template("index.html", list=list, prof=["инженер", "пилот", "строитель"])
 
 
