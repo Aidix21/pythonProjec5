@@ -1,0 +1,9 @@
+img {
+    width: 800px;
+    height: 550px;
+}
+
+.container {
+  display: grid;
+} 
+
