@@ -17,9 +17,16 @@ def main():
     job.work_size = 15
     job.collaborators = '2, 3'
     job.is_finished = False
-
     session.add(job)
-
+    
+    job = Jobs()
+    job.team_leader = 2
+    job.job = 'ремонт'
+    job.work_size = 15
+    job.collaborators = '2, 3'
+    job.is_finished = False
+    
+    session.add(job)
     session.commit()
 
 
