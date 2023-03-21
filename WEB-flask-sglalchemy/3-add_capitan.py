@@ -22,7 +22,18 @@ def main():
 
     session.add(user)
     session.commit()
+    
+    user = User()
+    user.surname="Ивонов",
+    user.name="Иван",
+    user.age=21,
+    user.position="пилот",
+    user.speciality="мойщик посуды",
+    user.address="module_2",
+    user.email="ivanov@mars.org"
 
-
+    session.add(user)
+    session.commit()
+    
 if __name__ == '__main__':
     main()
