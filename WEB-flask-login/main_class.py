@@ -20,7 +20,7 @@ def load_user(user_id):
     return db_sess.query(User).get(user_id)
 
 
-#http://127.0.0.1:5000/login
+#http://127.0.0.1:8080/login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
